@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jeongyoungpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jeongyoungpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jeongyoungpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jeongyoungpipelinesjavascriptdocker 
+          image: demostorereg.azurecr.io/jeongyoungpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
